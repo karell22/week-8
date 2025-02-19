@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Button Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showMessage()">I am awesome!</button>
+    <div id="message"></div>
+
+    <script>
+        let count = 1; // Keeps track of how many times the button is clicked
+
+        function showMessage() {
+            let messageDiv = document.getElementById("message");
+            let p = document.createElement("p");
+            p.textContent = count + ". I am awesome!";
+            messageDiv.appendChild(p);
+            count++; // Increase the count for the next message
+        }
+    </script>
+</body>
+</html>
